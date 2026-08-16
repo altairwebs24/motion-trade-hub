@@ -14,13 +14,108 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      admin_emails: {
+        Row: {
+          created_at: string
+          email: string
+          id: string
+          is_super: boolean
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          id?: string
+          is_super?: boolean
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          id?: string
+          is_super?: boolean
+        }
+        Relationships: []
+      }
+      apk_versions: {
+        Row: {
+          created_at: string
+          id: string
+          is_active: boolean
+          notes: string | null
+          url: string
+          version: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          is_active?: boolean
+          notes?: string | null
+          url: string
+          version: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          is_active?: boolean
+          notes?: string | null
+          url?: string
+          version?: string
+        }
+        Relationships: []
+      }
+      leads: {
+        Row: {
+          contact: string
+          created_at: string
+          id: string
+          message: string | null
+          name: string
+          plan: string | null
+        }
+        Insert: {
+          contact: string
+          created_at?: string
+          id?: string
+          message?: string | null
+          name: string
+          plan?: string | null
+        }
+        Update: {
+          contact?: string
+          created_at?: string
+          id?: string
+          message?: string | null
+          name?: string
+          plan?: string | null
+        }
+        Relationships: []
+      }
+      site_content: {
+        Row: {
+          key: string
+          label: string
+          updated_at: string
+          value: string
+        }
+        Insert: {
+          key: string
+          label?: string
+          updated_at?: string
+          value?: string
+        }
+        Update: {
+          key?: string
+          label?: string
+          updated_at?: string
+          value?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      is_admin: { Args: never; Returns: boolean }
     }
     Enums: {
       [_ in never]: never
