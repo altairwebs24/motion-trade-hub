@@ -421,7 +421,10 @@ function ApkTab() {
       is_active: true,
     });
     setBusy(false);
-    if (insErr) return toast.error(insErr.message);
+    if (insErr) {
+      toast.error(insErr.message);
+      return;
+    }
     toast.success("New scanner version published.");
     setVersion("");
     setNotes("");
