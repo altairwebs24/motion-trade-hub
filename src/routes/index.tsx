@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { Reveal } from "@/components/site/Reveal";
+import { FeatureCarousel } from "@/components/site/FeatureCarousel";
 import { QuoteMarquee } from "@/components/site/QuoteMarquee";
 import { LeadForm } from "@/components/site/LeadForm";
 import { useSiteContent } from "@/hooks/useSiteContent";
