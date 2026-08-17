@@ -205,3 +205,11 @@
 @utility pulse-ring {
   animation: pulse-ring 2.4s cubic-bezier(0.2, 0.7, 0.2, 1) infinite;
 }
+
+@utility no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
