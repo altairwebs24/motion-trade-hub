@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { Reveal } from "@/components/site/Reveal";
+import { FeatureCarousel } from "@/components/site/FeatureCarousel";
 import { QuoteMarquee } from "@/components/site/QuoteMarquee";
 import { LeadForm } from "@/components/site/LeadForm";
 import { useSiteContent } from "@/hooks/useSiteContent";
@@ -136,17 +137,9 @@ function Index() {
           <p className="script-accent text-4xl text-foreground/70">Built for the chart</p>
           <h2 className="display-title mt-2 text-4xl sm:text-5xl">What the scanner does</h2>
         </Reveal>
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {FEATURES.map((f, i) => (
-            <Reveal key={f.title} delay={i * 0.06}>
-              <div className="glow-card h-full rounded-2xl border border-border bg-card p-6">
-                <f.icon className="h-7 w-7" strokeWidth={1.6} />
-                <h3 className="mt-5 text-lg font-semibold">{f.title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">{f.text}</p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
+        <Reveal className="mt-12">
+          <FeatureCarousel items={FEATURES} />
+        </Reveal>
       </section>
 
       {/* PRICING PREVIEW */}
